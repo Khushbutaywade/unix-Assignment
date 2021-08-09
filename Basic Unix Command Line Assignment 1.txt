@@ -1,0 +1,424 @@
+Name : Khushbu Taywade.
+Objective:- Assignments will help trainees to understand the basics of unix command and how to explore and use it.
+
+DO NOT copy paste commands from internet, you can take help of the Unix in-built command manual.
+
+Be Honest to yourself!
+
+Important command and option to learn unix commands:-
+man Command
+Example:-
+man ls
+
+--help Option
+Example:-
+ls --help
+
+NOTE:- Always use "man" command before using any unix commands and read about it and its options and how to use it.
+
+Assignments:-
+
+1)List the contents of a directory and their attributes
+Ans:guest-w9agqg@user-HP-Laptop-15-bs0xx:~$ ls -lt
+total 12
+drwxr-xr-x 2 guest-w9agqg guest-w9agqg   40 Aug  7 15:43 Desktop
+drwxr-xr-x 2 guest-w9agqg guest-w9agqg   40 Aug  7 15:43 Documents
+drwxr-xr-x 2 guest-w9agqg guest-w9agqg   40 Aug  7 15:43 Downloads
+drwxr-xr-x 2 guest-w9agqg guest-w9agqg   40 Aug  7 15:43 Music
+drwxr-xr-x 2 guest-w9agqg guest-w9agqg   40 Aug  7 15:43 Pictures
+drwxr-xr-x 2 guest-w9agqg guest-w9agqg   40 Aug  7 15:43 Public
+drwxr-xr-x 2 guest-w9agqg guest-w9agqg   40 Aug  7 15:43 Templates
+drwxr-xr-x 2 guest-w9agqg guest-w9agqg   40 Aug  7 15:43 Videos
+-rw-r--r-- 1 guest-w9agqg guest-w9agqg 8980 Aug  7 15:43 examples.desktop
+
+2)Long list the content with file, directory ownership, permissions,sizes, etc…
+Ans: ls -l
+
+3)Display the size of the file in human readable format
+Ans: ls -lh
+
+4)Show all files and folders including hidden one
+Ans:ls -a
+
+5)list directories recursively
+Ans:ls -R
+
+6)Sort the files by size with largest at the top
+Ans: ls -s
+
+7)Sort the files by last time modified displaying the newest first.
+Ans: ls -t
+
+8)Diplay the location of a program/command, where it is installed.
+Ans:which [-a][-p path] command (linux)
+
+9)Which command is used to switch directory from one to another
+
+guest-w9agqg@user-HP-Laptop-15-bs0xx:~$ mkdir new 
+guest-w9agqg@user-HP-Laptop-15-bs0xx:~$ cd new 
+guest-w9agqg@user-HP-Laptop-15-bs0xx:~/new$ 
+
+
+10)List all the environment variables set for the current shell environment
+
+guest-w9agqg@user-HP-Laptop-15-bs0xx:~/new$ printenv
+XDG_VTNR=7
+SSH_AGENT_PID=3294
+XDG_SESSION_ID=c3
+CLUTTER_IM_MODULE=xim
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/guest-w9agqg
+SESSION=ubuntu
+TERM=xterm-256color
+SHELL=/bin/bash
+VTE_VERSION=4205
+SSH_AGENT_LAUNCHER=upstart
+QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1
+WINDOWID=62914570
+UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/990/3144
+GNOME_KEYRING_CONTROL=
+GTK_MODULES=gail:atk-bridge:unity-gtk-module
+USER=guest-w9agqg
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+QT_ACCESSIBILITY=1
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+SSH_AUTH_SOCK=/tmp/ssh-XHfqhT1c8xym/agent.3293
+DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg
+PATH=/tmp/guest-w9agqg/bin:/tmp/guest-w9agqg/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+DESKTOP_SESSION=ubuntu
+QT_IM_MODULE=ibus
+QT_QPA_PLATFORMTHEME=appmenu-qt5
+DIALOG_SLEEP=4
+PWD=/tmp/guest-w9agqg/new
+XDG_SESSION_TYPE=x11
+JOB=unity-settings-daemon
+XMODIFIERS=@im=ibus
+GNOME_KEYRING_PID=
+LANG=en_IN
+MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path
+IM_CONFIG_PHASE=1
+COMPIZ_CONFIG_PROFILE=ubuntu
+GDMSESSION=ubuntu
+SESSIONTYPE=gnome-session
+GTK2_MODULES=overlay-scrollbar
+HOME=/tmp/guest-w9agqg
+XDG_SEAT=seat0
+SHLVL=1
+LANGUAGE=en_IN:en
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+UPSTART_INSTANCE=
+UPSTART_EVENTS=xsession started
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=guest-w9agqg
+COMPIZ_BIN_PATH=/usr/bin/
+QT4_IM_MODULE=xim
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-0oS7z4MdIA
+LESSOPEN=| /usr/bin/lesspipe %s
+INSTANCE=
+UPSTART_JOB=unity7
+XDG_RUNTIME_DIR=/run/user/990
+DISPLAY=:0
+XDG_CURRENT_DESKTOP=Unity
+GTK_IM_MODULE=ibus
+LESSCLOSE=/usr/bin/lesspipe %s %s
+XAUTHORITY=/tmp/guest-w9agqg/.Xauthority
+_=/usr/bin/printenv
+OLDPWD=/tmp/guest-w9agqg
+guest-w9agqg@user-HP-Laptop-15-bs0xx:~/new$ 
+
+11)List all the environment variables set for the current shell environment
+Ans: PATH,USER,LOGNAME,SHELL,MAIL,EDITOR
+
+12)Did you notice something in the output of "env" command?
+Ans:it print the list of current environment veriables.
+
+13)Which command is used to print the text or any variables value in the Console/Terminal?
+Ans:echo "write a text"
+
+14)Print the value of the env variable "PATH" on the console
+Ans:printenv PATH
+
+15)Is linux a case-sensitive operating system?
+Ans:Yes
+
+16)Is, "Ls" same as "ls"?
+Ans: No ,ls=list of the files and directories.
+     Ls= list of the files and parameters
+
+17)Display your currently logged in user
+Ans:echo $USER
+
+18)how do you change the currrently logged in user to another user?
+Ans:sudo su 
+
+19)Which command is used to leave a shell environment that you are currently logged in to?
+Ans:exit command
+
+20)How do you reboot the system?
+Ans sudo reboot
+
+21)How do you shutdown the system?
+Ans: sudo shutdown
+
+22)Display all the major running processes in the system
+Ans: top
+
+23)Understand the output of command used in above question of displaying processes, explain the meaning of each column and what data it displays?
+Ans:PID (Process ID)
+User (User name of the task owner  )
+PR (Priority)
+NI (Nice Value of the task)
+VIRT (Virtual Memory Used)
+RES (Physical Memory Used)
+SHR (Share Memory Used)
+S (Status of the task)
+%CPU (% of CPU Time)
+%MEM (% of Physical Memory Used )
+TIME+ (Total CPU Time)
+COMMAND (Command name)
+
+24)Display the name of the system kernel
+Ans: uname
+
+25)display the kernel release number
+Ans: uname -r
+
+26)display teh machine type of the current kernel
+Ans: uname -m
+
+27)Display the name of the operating system that the kernel is running on
+Ans:GNU/linux
+
+28)Display all info that uname command can show.
+Ans: The uname tool is most commonly used to determine the processor architecture, the system hostname and the version of the kernel running on the system.
+The syntax of the uname command takes the following form:
+uname [OPTIONS]...
+-s, (--kernel-name) - Prints the kernel name.
+-n, (--nodename) - Prints the system’s node name (hostname). This is the name the system uses when communicating over the network. When used with the -n option, uname produces the same output as the hostname command.
+-r, (--kernel-release) - Prints the kernel release.
+-v, (--kernel-version) - Prints the kernel version.
+-m, (--machine) - Prints the name of the machine’s hardware name.
+-p, (--processor) - Prints the architecture of the processor.
+-i, (--hardware-platform) - Prints the hardware platform.
+-o, (--operating-system) - Print the name of the operating system. On Linux systems that is “GNU/Linux”
+-a, (--all) - When the -a option is used, uname behaves the same as if the -snrvmo options have been given.
+
+29)Display the name of directory that you are currently pointing to
+Ans: pwd
+
+30)change the current directory to another directory that you have in your system.
+Ans: cd <directory name>
+
+31)Go up one directory
+Ans: cd ..
+
+32)Return to last directory
+Ans: cd /
+
+33)change the current directory to home(logged in user's) directory
+Ans:cd /home
+
+34)How to check all the command used from the prompt (Command History)
+Ans: history
+
+35)In which file the history of commands are stored in?
+Ans:1).bash_history file\echo  $HISTFILE
+    2)/bin
+
+36)How many lines of history does the system keep and from where you can change it?
+Ans:1000 lines of history is stored by default.
+We can Change it by using $HISTSIZE and$HISTFILESIZE command
+
+37)How can you modify bash's history behaviour
+Ans:PROMPET_COMMAND
+
+38)Display all the commands entered so far, now, try to run a particular command from the history list without typing that command.
+Ans:!97 (command number)
+
+NOTE:- TAB key is your friend when it comes to command completion and having long file and directory names autocompleted at the bash prompt for you. JUST BE LAZY AND USE TAB KEY FOR AUTO COMPLETION ;-)
+
+39)What are the different types of shell and where are they used and how do we use them?
+Ans:1)The Bourne Shell (sh):This is what made it the default shell for Solaris OS. It is also used as the default shell for all Solaris system administration scripts. 
+Start reading about shell scripting here.
+    2)The GNU Bourne-Again Shell (bash):The complete path-name for the GNU Bourne-Again shell is /bin/bash.
+ By default, it uses the prompt bash-VersionNumber# for the root user and bash-VersionNumber$ for the non-root users.
+    3)The C Shell (csh):The complete path-name for the C shell is /bin/csh. By default, 
+it uses the prompt hostname# for the root user and hostname% for the non-root users.
+    4) The Korn Shell (ksh):Besides supporting everything that would be supported by the Bourne shell, it provides users with new functionalities. 
+It allows in-built support for arithmetic operations while offereing interactive features which are similar to the C shell.
+    5)The Z Shell (zsh):The Z Shell or zsh is a sh shell extension with tons of improvements for customization. 
+If you want a modern shell that has all the features a much more, the zsh shell is what you’re looking for.
+
+40)What is the difference between login shell and non-login shell?
+Ans:1)Login shells
+A Login shell is started after a successful login, using /bin/login, by reading the /etc/passwd file.
+ Login shell is the first process that executes under our user ID when we log in to a session. 
+The login process tells the shell to behave as a login shell with a convention: passing argument 0, which is normally the name of the shell executable, with a “-” character prepended. For example, for Bash shell it will be -bash.
+Login shells include the following.
+• Shells created by explicitly telling to login.
+examples: # su - | # su -l | # su --login | # su USERNAME - | # su -l USERNAME | # su --login USERNAME | # sudo -i
+• Shells created at login, including X login.
+A Login shell can be recognized by the following procedure.
+Execute the below command in shell.
+2)Non login shells
+A Non login shell is started by a program without a login. In this case, the program just passes the name of the shell executable.
+ For example, for a Bash shell it will be simply bash.
+Non login shells include the following.
+• Shells created using the below command syntax.
+examples: # su | # su USERNAME
+• Graphical terminals
+• Executed scripts
+• Any other bash instances
+A Non login shell can be recognized by the following procedure.
+Execute the below command in shell.
+If the output is the name of our shell, does not prepend by a dash, then it is a Non login shell.
+For example bash, su etc.
+
+41)How do we start login shell and non-login shell?
+Ans:Login Shell: A Login shell is started after a successful login, using /bin/login, by reading the /etc/passwd file. 
+Login shell is the first process that executes under our user ID when we log in to a session. 
+The login process tells the shell to behave as a login shell with a convention: passing argument 0, which is normally the name of the shell executable, with a “-” character prepended. 
+For example, for Bash shell it will be -bash.
+Non-login shell: A Non login shell is started by a program without a login. In this case, the program just passes the name of the shell executable. 
+For example, for a Bash shell it will be simply bash.
+
+42)What happens when you start a login shell (which files are read and used and Why)?
+Ans:A Login shell is started after a successful login, using /bin/login, by reading the /etc/passwd file.
+
+43)What happens when you start a non-login shell (Which files are read and used and Why)?
+Ans:When an interactive shell that is not a login shell is started, Bash reads and executes commands from ~/.bashrc, if that file exists. This may be inhibited by using the --norc option. The --rcfile file option will force Bash to read and execute commands from file instead of ~/.bashrc.
+So, typically, your ~/.bash_profile contains the line
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+after (or before) any login-specific initializations.
+
+44)What are Shell Configuration Files, why do we need it?
+Ans:Shell configuration files are executed automatically when you log in and. 
+out of a shell. They initialize and configure a shell upon login and. perform cleanup operations upon logout.
+
+45)Explain the Order of file usage from the system/user's home directory when user logs in to the System.
+Ans:Documents--These include text files, such as letters or reports, computer source code, or anything else that you write and want to save.
+
+Commands--Most commands are executable files; that is, they are files you can execute to run a particular program. For example, 
+the date command that you saw in the previous chapter, which executes a program that provides the current date, is an executable file.
+
+Devices--Your terminal, printer, and disk drive(s) are all treated as files.
+
+Directories--A directory is simply a file that contains other files.
+
+46)What are Shell Variables, list major shell variables and what do they represent?
+Ans:A shell variable is a variable that is available only to the current shell. In contrast, 
+an environment variable is available system wide and can be used by other applications on the system. 
+ It processes the commands entered on the command line or read from a shell script file.
+
+Local Variables − A local variable is a variable that is present within the current instance of the shell. 
+It is not available to programs that are started by the shell. They are set at the command prompt.
+
+Environment Variables − An environment variable is available to any child process of the shell. 
+Some programs need environment variables in order to function correctly. Usually,
+ a shell script defines only those environment variables that are needed by the programs that it runs.
+
+Shell Variables − A shell variable is a special variable that is set by the shell and is required by the shell 
+in order to function correctly. Some of these variables are environment variables whereas others are local variables.
+
+47)How we see all our env variables?
+Ans:The printenv command list the values of the specified environment VARIABLE(s).
+
+48)How we see all env variables in alphabical order?
+Ans:To see a complete list of environment variables, use this command from any location:
+ get-childitem env:* The sort-object cmdlet in the second step of the pipeline sorts the 
+objects passed to it by the first step of the pipeline in ascending alphabetical order by 
+the value of the Key property.
+
+49)What Format does the env var and its values are stored?
+Ans:An Environment variable is stored in name /value pair.
+
+
+50)How do you create your own varible?
+Ans:read variable_name
+
+51)How do you start a new bash shell?
+Ans:bash -c 'gnome-terminal -x cd /absolute-path && program_name'
+
+52)Difference between Local/Shell variables to Global Variable
+Ans:Local variable is declared inside a function whereas Global variable is declared outside the function.
+Local variables are stored on the stack whereas the Global variable are stored on a fixed location decided by the compiler
+
+53)Making a variable accessible from other the shell in the system.
+54)Show the real life use case of exporting a variable
+Ans:export [-f] [-n] [name[=value] ...] or export -p
+55)Convert the above script file into a command, The file should run with "myappp" instead of "myapp.sh"
+56)What is Globbing? Explain in depth with examples?
+Ans:The Bash shell feature that is used for matching or expanding specific types of patterns is called globbing.
+ Globbing is mainly used to match filenames or searching for content in a file. Globbing uses wildcard characters to create the pattern.
+57)List all entries with extension ".sh"
+Ans:find . -type f \ -name "*.sh"
+
+58)List all entries with numbers in it.
+Ans:Using ls piped to grep -E (extended grep with additional regexp capabilities) 
+to search for all filenames with only numeric characters:
+Ans:ls | grep -E '^[0-9]+$'
+
+59)List all entries that starts with a character and ends with a number
+60)List all entries that name length more than 5 characters
+Ans:find /tmp -type f -print| awk -F/ ' length($NF)  == >5 '
+
+61)What is Quoting? and Why do we need it?
+Ans:Sometimes you will want to use special characters literally, i.e., without their special meanings. This is called quoting. 
+If you surround a string of characters with single quotation marks (or quotes), you strip all characters 
+within the quotes of any special meaning they might have.
+
+62)Write few(minimum 3) unique examples that shows, how a particular problem is solved using Quoting.
+Ans:Quoting is used to remove the special meaning of certain characters or words to the shell. 
+Quoting can be used to disable special treatment for special characters,
+ to prevent reserved words from being recognized as such, and to prevent parameter expansion.
+
+63)How do you find a particular files/directories based on a particular search criteria?
+HINT:- look for commands -> locate, find and whereis
+Ans:find . -name "pattern" -print
+
+64)Write major difference between locate, find and whereis?
+Ans:Big difference is that find searches real files recursively down a given directory, 
+while locate searches a database without requiring specific directory. Thus, if you have saved 
+a file before updating database, find will find it , but locate won't.
+As for whereis and which, they search only inside those directories that are mentioned in your 
+PATH variable and only those with executable permission set
+
+65)How Globbing is different from locate, find and whereis?
+Ans:Big difference is that find searches real files recursively down a given directory, 
+while locate searches a database without requiring specific directory. Thus, if you have 
+saved a file before updating database, find will find it , but locate won't.
+
+66)Explain the Linux File System.
+Ans:A Linux file system is a structured collection of files on a disk drive or a partition. 
+A partition is a segment of memory and contains some specific data. In our machine, 
+there can be various partitions of the memory. Generally, every partition contains a file system.
+
+67)Explain absolute and Relative Paths
+Ans:Absolute Path:  absolute path is defined as specifying the location of a file or directory from the root directory(/). In other words,
+we can say that an absolute path is a complete path from start of actual file system from / directory.
+Relative path:Relative path is defined as the path related to the present working directly(pwd). 
+It starts at your current directory and never starts with a / .
+
+68)What are the different ways of creating a File in linux System? Write an example of each and the difference between them.
+Ans:1 touch filename
+    2 >filename
+    3cat>filename
+    4 echo 'random sample test'> filename
+
+69)In how many ways we can delete the files from linux system? write an example of each and teh difference between them.
+Ans:1.rm command
+	Multiple files can be removed by specifying multiple filenames to rm as arguments.
+
+	$ rm {file-name-1} {file-name-2} {file-name-3} ... {file-name-N}
+
+	rm also supports regular expressions. If you want to delete all files named file-name-*, you can use:$ rm file-name-*
+2.unlink command :
+	Not so popular. To remove a single file permanently, we can use unlink command.
+		
+70)Archiving files using linux command, write a command to archive set of files from linux commands.
+Ans:tar cvf archieve.tar filename
+
+71)Extract the archived files from the above step.
+Ans:tar xvf Filename
